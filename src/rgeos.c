@@ -99,7 +99,7 @@ static void __warningHandler(const char *fmt, ...) {
     p = buf + strlen(buf) - 1;
     if(strlen(buf) > 0 && *p == '\n') *p = '\0';
 
-    warning(buf);
+    warning("%s", buf);
     
     return;
 }
