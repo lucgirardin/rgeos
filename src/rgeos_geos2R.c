@@ -683,7 +683,7 @@ SEXP rgeos_geosring2Polygon(SEXP env, GEOSGeom lr, int hole) {
     if (!isLogical(valid)) {
         UNPROTECT(pc);
         if (isString(valid)) 
-            error(CHAR(STRING_ELT(valid, 0)));
+            error("%s", CHAR(STRING_ELT(valid, 0)));
         else 
             error("invalid Polygon object");
     }
