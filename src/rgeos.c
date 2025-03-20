@@ -84,7 +84,7 @@ static void __errorHandler(const char *fmt, ...) {
 //Rprintf("ptr: %d\n", (int) sr);
 //    finishGEOS_r(sr);
 
-//    error(errbuf);
+//    error("%s", errbuf);
 
     return;
 }

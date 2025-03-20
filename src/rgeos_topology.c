@@ -93,7 +93,7 @@ SEXP rgeos_makevalidparams(SEXP env, SEXP obj, SEXP id, SEXP byid ) {
             GEOSGeom_destroy_r(GEOShandle, geom);
             GEOSMakeValidParams_destroy_r(GEOShandle, p);
             char* errbuf = get_errbuf();
-            error(errbuf);
+            error("%s", errbuf);
         }
     }
     
@@ -136,7 +136,7 @@ SEXP rgeos_maximuminscribedcircle(SEXP env, SEXP obj, SEXP id, SEXP byid, SEXP t
         if (resgeoms[i] == NULL) {
             GEOSGeom_destroy_r(GEOShandle, geom);
             char* errbuf = get_errbuf();
-            error(errbuf);
+            error("%s", errbuf);
         }
     }
     
@@ -235,7 +235,7 @@ SEXP rgeos_topologyfunc(SEXP env, SEXP obj, SEXP id, SEXP byid, p_topofunc topof
             if (resgeoms[i] == NULL) {
                 GEOSGeom_destroy_r(GEOShandle, geom);
                 char* errbuf = get_errbuf();
-                error(errbuf);
+                error("%s", errbuf);
             }
 //                error("rgeos_topologyfunc: unable to calculate");
         }
