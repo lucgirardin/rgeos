@@ -91,7 +91,7 @@ SEXP rgeos_binarytopologyfunc(SEXP env, SEXP spgeom1, SEXP spgeom2, SEXP byid, S
                 GEOSGeom_destroy_r(GEOShandle, geom1);
                 GEOSGeom_destroy_r(GEOShandle, geom2);
                 char* buf = get_errbuf();
-                error(buf);
+                error("%s", buf);
             }
             if (!GEOSisEmpty_r(GEOShandle, thisgeom)) {
  // conditionally drop returned objects with lower topological dimension

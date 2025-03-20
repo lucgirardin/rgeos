@@ -209,7 +209,7 @@ GEOSGeom rgeos_SpatialLines2geosline(SEXP env, SEXP obj) {
     if (GC == NULL) {
             GEOSGeom_destroy_r(GEOShandle, GC);
             char* buf = get_errbuf();
-            error(buf);
+            error("%s", buf);
     }
     
     UNPROTECT(pc);
@@ -244,7 +244,7 @@ GEOSGeom rgeos_Lines2geosline(SEXP env, SEXP obj) {
     if (GC == NULL) {
             GEOSGeom_destroy_r(GEOShandle, GC);
             char* buf = get_errbuf();
-            error(buf);
+            error("%s", buf);
     }
     
     UNPROTECT(pc);
@@ -336,7 +336,7 @@ GEOSGeom rgeos_Polygons2geospolygon(SEXP env, SEXP obj) {
     if (GC == NULL) {
             GEOSGeom_destroy_r(GEOShandle, GC);
             char* buf = get_errbuf();
-            error(buf);
+            error("%s", buf);
     }
     
     UNPROTECT(pc);
@@ -361,7 +361,7 @@ GEOSGeom rgeos_Polygons_i_2Polygon(SEXP env, SEXP pls, SEXP vec) {
     if (pol == NULL) {
         GEOSGeom_destroy_r(GEOShandle, pol);
         char* buf = get_errbuf();
-        error(buf);
+        error("%s", buf);
     }
     
     GEOSGeom res = NULL;
@@ -373,7 +373,7 @@ GEOSGeom rgeos_Polygons_i_2Polygon(SEXP env, SEXP pls, SEXP vec) {
             GEOSGeom_destroy_r(GEOShandle, pol);
             GEOSGeom_destroy_r(GEOShandle, res);
             char* buf = get_errbuf();
-            error(buf);
+            error("%s", buf);
         }
     } else if (n > 1) {
 //Rprintf("in n>1 branch\n");
@@ -394,7 +394,7 @@ GEOSGeom rgeos_Polygons_i_2Polygon(SEXP env, SEXP pls, SEXP vec) {
             GEOSGeom_destroy_r(GEOShandle, pol);
             GEOSGeom_destroy_r(GEOShandle, res);
             char* buf = get_errbuf();
-            error(buf);
+            error("%s", buf);
         }
     }
     
