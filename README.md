@@ -47,7 +47,7 @@ Rscript -e 'install.packages(here::here(""), repos = NULL, type="source")'
 
 It is then possible to install RGDAL as well:
 ```R
-devtools::install_version("rgdal", version = "1.6-7", repos = "http://cran.us.r-project.org")
+remotes::install_github("lucgirardin/rgdal")
 ```
 
 Disclaimer
