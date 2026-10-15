@@ -1,6 +1,7 @@
 #ifndef RGEOS_H
 #define RGEOS_H
 
+#define ENABLE_LEGACY_NONAPI
 #include <R.h>
 #include <Rdefines.h>
 
